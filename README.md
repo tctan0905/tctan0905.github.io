@@ -17,5 +17,4 @@ Android / iOS
 ## 🧠 Tech
 - Unity 2022
 - C#
-- Scriptable Object
 - Dotween
