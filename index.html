@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unity Developer Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f5f5f5;
+      color:#222;
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .header{
+      margin-bottom:50px;
+    }
+
+    .header h1{
+      font-size:56px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      font-size:20px;
+      color:#666;
+    }
+
+    .section{
+      margin-bottom:60px;
+    }
+
+    .section-title{
+      font-size:42px;
+      font-weight:bold;
+      margin-bottom:20px;
+      padding-bottom:10px;
+      border-bottom:2px solid #ddd;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      margin-top:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    ul{
+      margin-left:30px;
+      margin-top:15px;
+    }
+
+    li{
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    p{
+      font-size:28px;
+      margin-top:15px;
+    }
+
+    .tech-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .tag{
+      background:#222;
+      color:white;
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:18px;
+    }
+
+    .project-image{
+      width:100%;
+      border-radius:16px;
+      margin-top:25px;
+    }
+
+    .button{
+      display:inline-block;
+      margin-top:20px;
+      padding:14px 24px;
+      background:#222;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .button:hover{
+      opacity:0.85;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:80px;
+      color:#777;
+      font-size:18px;
+    }
+
+    @media(max-width:768px){
+
+      .header h1{
+        font-size:40px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+      p{
+        font-size:20px;
+      }
+
+      li{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>🎮 Casino Online Game</h1>
+      <p>Unity Developer Portfolio</p>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="section">
+      <div class="section-title">📌 Description</div>
+
+      <div class="card">
+        <p>
+          A mobile casino online game developed with Unity.
+          Focused on gameplay systems, multiplayer features,
+          UI systems, and mobile optimization.
+        </p>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="section">
+      <div class="section-title">🚀 Features</div>
+
+      <div class="card">
+        <ul>
+          <li>Touch input system</li>
+          <li>Object pooling</li>
+          <li>Simple UI/UX</li>
+          <li>Mobile optimization</li>
+          <li>Drag and drop cards</li>
+          <li>Gameplay systems</li>
+          <li>Realtime multiplayer</li>
+          <li>UI systems</li>
+          <li>Animation with DOTween</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PLATFORM -->
+    <div class="section">
+      <div class="section-title">📱 Platform</div>
+
+      <div class="card">
+        <p>Android / iOS</p>
+      </div>
+    </div>
+
+    <!-- TECH -->
+    <div class="section">
+      <div class="section-title">🧠 Tech Stack</div>
+
+      <div class="card">
+
+        <div class="tech-list">
+          <div class="tag">Unity 2022</div>
+          <div class="tag">C#</div>
+          <div class="tag">DOTween</div>
+          <div class="tag">Git</div>
+          <div class="tag">SVN</div>
+          <div class="tag">Firebase</div>
+          <div class="tag">SmartFox</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RESPONSIBILITIES -->
+    <div class="section">
+      <div class="section-title">💼 Responsibilities</div>
+
+      <div class="card">
+        <ul>
+          <li>Develop gameplay systems</li>
+          <li>Build card drag-and-drop mechanics</li>
+          <li>Optimize mobile performance</li>
+          <li>Implement multiplayer features</li>
+          <li>Create UI systems and animations</li>
+          <li>Fix bugs and improve user experience</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- GAMEPLAY -->
+    <div class="section">
+      <div class="section-title">🎥 Gameplay</div>
+
+      <div class="card">
+
+        <p>
+          Add your gameplay video here.
+        </p>
+
+        <!-- Replace VIDEO_ID -->
+        <iframe
+          width="100%"
+          height="450"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Gameplay Video"
+          frameborder="0"
+          allowfullscreen
+          style="margin-top:20px; border-radius:16px;">
+        </iframe>
+
+      </div>
+    </div>
+
+    <!-- SCREENSHOTS -->
+    <div class="section">
+      <div class="section-title">📷 Screenshots</div>
+
+      <div class="card">
+
+        <!-- Replace image path -->
+        <img
+          src="assets/gameplay_1.png"
+          alt="Gameplay Screenshot"
+          class="project-image"
+        />
+
+        <img
+          src="assets/gameplay_2.png"
+          alt="Gameplay Screenshot"
+          class="project-image"
+        />
+
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+      <div class="section-title">📬 Contact</div>
+
+      <div class="card">
+
+        <p>Email: yourmail@gmail.com</p>
+
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          class="button">
+          GitHub
+        </a>
+
+        <a
+          href="cv.pdf"
+          target="_blank"
+          class="button">
+          Download CV
+        </a>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2026 Unity Developer Portfolio
+    </div>
+
+  </div>
+
+</body>
+</html>
