@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tran Cong Tan - Unity Developer</title>
 
@@ -52,13 +53,6 @@
       font-weight:500;
     }
 
-    .hero p{
-      max-width:900px;
-      margin:auto;
-      font-size:22px;
-      color:#d4d4d4;
-    }
-
     /* SECTION */
 
     .section{
@@ -72,6 +66,8 @@
       border-bottom:2px solid #2a2a2a;
     }
 
+    /* CARD */
+
     .card{
       background:#1b1b1b;
       border-radius:24px;
@@ -81,16 +77,38 @@
 
     p{
       font-size:22px;
+      color:#d4d4d4;
       margin-bottom:20px;
-      color:#d6d6d6;
     }
 
     /* PROJECT */
 
-    .project-title{
+    .project-container{
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+    }
+
+    .project-name,
+    .project-body,
+    .project-screenshot,
+    .project-video-game{
+      background:#1b1b1b;
+      border-radius:24px;
+      padding:40px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .project-name h3{
       font-size:42px;
-      margin-bottom:25px;
       color:#ffb300;
+    }
+
+    .project-body h4,
+    .project-screenshot h4,
+    .project-video-game h4{
+      font-size:32px;
+      margin-bottom:25px;
     }
 
     /* FEATURES */
@@ -111,11 +129,11 @@
     }
 
     .feature-item:hover{
-      transform:translateY(-4px);
       background:#303030;
+      transform:translateY(-4px);
     }
 
-    /* GALLERY */
+    /* SCREENSHOT */
 
     .gallery{
       display:grid;
@@ -143,6 +161,13 @@
       margin-top:20px;
     }
 
+    /* CONTACT */
+
+    .contact-email{
+      color:#ffb300;
+      text-decoration:none;
+    }
+
     /* FOOTER */
 
     .footer{
@@ -165,16 +190,18 @@
         font-size:24px;
       }
 
-      .hero p{
-        font-size:18px;
-      }
-
       .section-title{
         font-size:34px;
       }
 
-      .project-title{
+      .project-name h3{
         font-size:30px;
+      }
+
+      .project-body h4,
+      .project-screenshot h4,
+      .project-video-game h4{
+        font-size:24px;
       }
 
       p{
@@ -185,7 +212,11 @@
         height:250px;
       }
 
-      .card{
+      .card,
+      .project-name,
+      .project-body,
+      .project-screenshot,
+      .project-video-game{
         padding:24px;
       }
 
@@ -220,8 +251,8 @@
       <div class="card">
 
         <p>
-          I am a Unity Developer with 3 years of experience dedicated to building
-          intuitive and visually stunning Game User Interfaces.
+          I am a Unity Developer with 3 years of experience dedicated
+          to building intuitive and visually stunning Game User Interfaces.
         </p>
 
         <p>
@@ -242,137 +273,146 @@
         🎮 Project
       </div>
 
-      <div class="card">
+      <div class="project-container">
 
-        <h3 class="project-title">
-          🐉 Dragon Tiger
-        </h3>
+        <!-- PROJECT NAME -->
 
-        <!-- DESCRIPTION -->
+        <div class="project-name">
 
-        <p>
-          Dragon Tiger is a mobile multiplayer realtime casino game where players
-          can participate in multiple game modes such as Dragon Tiger, Poker,
-          Blackjack, Baccarat, Rummy, Teen Patti, and Andar Bahar.
-        </p>
-
-        <p>
-          The game focuses on fast gameplay experience, realtime interaction,
-          and multiplayer online systems optimized for mobile platforms.
-        </p>
-
-        <p>
-          Players can join online rooms, tournaments, mission systems,
-          battle systems, and compete with other players through realtime
-          synchronization systems.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- KEY FEATURES -->
-
-    <section class="section">
-
-      <div class="section-title">
-        🚀 Key Features
-      </div>
-
-      <div class="feature-grid">
-
-        <div class="feature-item">
-          🎮 Multiplayer realtime gameplay
-        </div>
-
-        <div class="feature-item">
-          🃏 Multiple game modes
-        </div>
-
-        <div class="feature-item">
-          💰 Betting systems
-        </div>
-
-        <div class="feature-item">
-          🂡 Card dealing systems
-        </div>
-
-        <div class="feature-item">
-          👆 Drag-and-drop interactions
-        </div>
-
-        <div class="feature-item">
-          ⚔️ Normal, mission & battle systems
-        </div>
-
-        <div class="feature-item">
-          📱 Responsive mobile UI
-        </div>
-
-        <div class="feature-item">
-          ✨ Gameplay animations & visual effects
-        </div>
-
-        <div class="feature-item">
-          🌐 Realtime synchronization
-        </div>
-
-        <div class="feature-item">
-          🚀 Cross-platform mobile optimization
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- SCREENSHOTS -->
-
-    <section class="section">
-
-      <div class="section-title">
-        📷 Screenshots
-      </div>
-
-      <div class="card">
-
-        <div class="gallery">
-
-          <!-- Replace your images -->
-
-          <img src="assets/screenshot_1.png" alt="Dragon Tiger Screenshot">
-
-          <img src="assets/screenshot_2.png" alt="Dragon Tiger Screenshot">
-
-          <img src="assets/screenshot_3.png" alt="Dragon Tiger Screenshot">
-
-          <img src="assets/screenshot_4.png" alt="Dragon Tiger Screenshot">
+          <h3>
+            🐉 Dragon Tiger
+          </h3>
 
         </div>
 
-      </div>
+        <!-- PROJECT BODY -->
 
-    </section>
+        <div class="project-body">
 
-    <!-- VIDEO -->
+          <h4>
+            📌 Description
+          </h4>
 
-    <section class="section">
+          <p>
+            Dragon Tiger is a mobile multiplayer realtime casino game
+            where players can participate in multiple game modes such as
+            Dragon Tiger, Poker, Blackjack, Baccarat, Rummy,
+            Teen Patti, and Andar Bahar.
+          </p>
 
-      <div class="section-title">
-        🎥 Video Gameplay
-      </div>
+          <p>
+            The game focuses on fast gameplay experience,
+            realtime interaction, and multiplayer online systems
+            optimized for mobile platforms.
+          </p>
 
-      <div class="card">
+          <p>
+            Players can join online rooms, tournaments,
+            mission systems, battle systems,
+            and compete with other players through
+            realtime synchronization systems.
+          </p>
 
-        <p>
-          Replace VIDEO_ID with your gameplay video.
-        </p>
+          <h4 style="margin-top:40px;">
+            🚀 Key Features
+          </h4>
 
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Dragon Tiger Gameplay"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
+          <div class="feature-grid">
+
+            <div class="feature-item">
+              🎮 Multiplayer realtime gameplay
+            </div>
+
+            <div class="feature-item">
+              🃏 Multiple game modes
+            </div>
+
+            <div class="feature-item">
+              💰 Betting systems
+            </div>
+
+            <div class="feature-item">
+              🂡 Card dealing systems
+            </div>
+
+            <div class="feature-item">
+              👆 Drag-and-drop interactions
+            </div>
+
+            <div class="feature-item">
+              ⚔️ Normal, mission & battle systems
+            </div>
+
+            <div class="feature-item">
+              📱 Responsive mobile UI
+            </div>
+
+            <div class="feature-item">
+              ✨ Gameplay animations & visual effects
+            </div>
+
+            <div class="feature-item">
+              🌐 Realtime synchronization
+            </div>
+
+            <div class="feature-item">
+              🚀 Cross-platform mobile optimization
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT SCREENSHOT -->
+
+        <div class="project-screenshot">
+
+          <h4>
+            Screenshots
+          </h4>
+
+          <div class="gallery">
+
+            <img
+              src="assets/screenshot_1.png"
+              alt="Dragon Tiger Screenshot">
+
+            <img
+              src="assets/screenshot_2.png"
+              alt="Dragon Tiger Screenshot">
+
+            <img
+              src="assets/screenshot_3.png"
+              alt="Dragon Tiger Screenshot">
+
+            <img
+              src="assets/screenshot_4.png"
+              alt="Dragon Tiger Screenshot">
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT VIDEO -->
+
+        <div class="project-video-game">
+
+          <h4>
+            Video Gameplay
+          </h4>
+
+          <p>
+            Replace VIDEO_ID with your YouTube gameplay video.
+          </p>
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Dragon Tiger Gameplay"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+
+        </div>
 
       </div>
 
@@ -380,33 +420,29 @@
 
     <!-- CONTACT -->
 
-<section class="section">
+    <section class="section">
 
-  <div class="section-title">
-    📬 Contact Me
-  </div>
+      <div class="section-title">
+          Contact Me
+      </div>
 
-  <div class="card">
+      <div class="card">
+        
+        <p>
+          📧 Email:
+          <a
+            href="mailto:trancongtan0905@gmail.com"
+            class="contact-email">
 
-    <p>
-      Feel free to contact me for work opportunities,
-      collaborations, or freelance projects.
-    </p>
+            trancongtan0905@gmail.com
 
-    <p>
-      📧 Email: 
-      <a
-        href="mailto:trancongtan0905@gmail.com"
-        style="color:#ffb300; text-decoration:none;">
+          </a>
+        </p>
 
-        trancongtan0905@gmail.com
+      </div>
 
-      </a>
-    </p>
+    </section>
 
-  </div>
-
-</section>
     <!-- FOOTER -->
 
     <div class="footer">
