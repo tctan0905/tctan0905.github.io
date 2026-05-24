@@ -6,10 +6,13 @@ A mobile casino online game made with Unity.
 ## 🚀 Features
 - Touch input system
 - Object pooling
-- Score system
 - Simple UI/UX
 - Mobile optimization
 - Drag and drop cards
+- Gameplay systems
+- SmartFox realtime multiplayer
+- UI systems
+- Mobile optimization
 
 ## 📱 Platform
 Android / iOS
@@ -18,3 +21,4 @@ Android / iOS
 - Unity 2022
 - C#
 - Dotween
+- Git/SVN
