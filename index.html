@@ -1,3 +1,4 @@
+```html id="dragon-tiger-portfolio"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,125 +15,202 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
+      background: #0f0f0f;
+      color: white;
+      line-height: 1.7;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       padding: 40px 20px;
     }
 
-    .header {
-      margin-bottom: 50px;
+    /* HEADER */
+
+    .hero {
+      padding: 80px 0;
+      text-align: center;
     }
 
-    .header h1 {
-      font-size: 58px;
-      margin-bottom: 10px;
-    }
-
-    .header p {
-      color: #666;
-      font-size: 22px;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .section-title {
-      font-size: 42px;
-      font-weight: bold;
+    .hero h1 {
+      font-size: 72px;
       margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #ddd;
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    p {
+    .hero p {
       font-size: 24px;
-      margin-bottom: 20px;
+      color: #cfcfcf;
+      max-width: 900px;
+      margin: auto;
     }
 
-    ul {
-      margin-left: 30px;
-    }
-
-    li {
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .tech-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .tag {
-      background: #222;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-size: 18px;
-    }
-
-    .image {
-      width: 100%;
-      border-radius: 18px;
-      margin-top: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border-radius: 18px;
-      margin-top: 20px;
+    .hero-buttons {
+      margin-top: 40px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 20px;
-      margin-right: 10px;
-      padding: 14px 24px;
-      background: #222;
-      color: white;
-      border-radius: 12px;
+      padding: 14px 28px;
+      border-radius: 14px;
       text-decoration: none;
+      margin: 10px;
       transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .button-primary {
+      background: #ffb300;
+      color: black;
+    }
+
+    .button-secondary {
+      border: 2px solid #ffb300;
+      color: #ffb300;
     }
 
     .button:hover {
-      opacity: 0.85;
+      transform: translateY(-2px);
     }
 
-    .footer {
-      text-align: center;
-      margin-top: 80px;
-      color: #777;
+    /* SECTION */
+
+    .section {
+      margin-top: 100px;
+    }
+
+    .section-title {
+      font-size: 48px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #2a2a2a;
+      padding-bottom: 15px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 22px;
+      color: #d4d4d4;
+      margin-bottom: 20px;
+    }
+
+    /* FEATURE GRID */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      background: #232323;
+      padding: 24px;
+      border-radius: 18px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-4px);
+      background: #2a2a2a;
+    }
+
+    /* TECH */
+
+    .tech-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: #ffb300;
+      color: black;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: bold;
       font-size: 18px;
     }
 
-    @media(max-width:768px) {
+    /* GALLERY */
 
-      .header h1 {
-        font-size: 40px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    /* VIDEO */
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border-radius: 24px;
+      margin-top: 20px;
+    }
+
+    /* RESPONSIBILITY */
+
+    ul {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    li {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: #d6d6d6;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 120px;
+      text-align: center;
+      color: #777;
+      padding-bottom: 50px;
+      font-size: 18px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 768px) {
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       .section-title {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       p {
@@ -144,9 +222,14 @@
       }
 
       iframe {
-        height: 250px;
+        height: 260px;
+      }
+
+      .card {
+        padding: 24px;
       }
     }
+
   </style>
 
 </head>
@@ -155,14 +238,35 @@
 
   <div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-      <h1>🐉 Dragon Tiger Casino Game</h1>
-      <p>Unity Developer Portfolio</p>
-    </div>
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <h1>🐉 Dragon Tiger</h1>
+
+      <p>
+        Multiplayer Realtime Casino Mobile Game developed with Unity.
+        Featuring multiple casino game modes, realtime synchronization,
+        responsive mobile gameplay, and competitive multiplayer systems.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#gameplay" class="button button-primary">
+          🎥 Gameplay
+        </a>
+
+        <a href="#screenshots" class="button button-secondary">
+          📷 Screenshots
+        </a>
+
+      </div>
+
+    </section>
 
     <!-- DESCRIPTION -->
-    <div class="section">
+
+    <section class="section">
 
       <div class="section-title">
         📌 Description
@@ -171,67 +275,83 @@
       <div class="card">
 
         <p>
-          Dragon Tiger is a fast-paced online casino card game developed with Unity
-          for Android and iOS platforms.
+          Dragon Tiger is a mobile multiplayer realtime casino game where players
+          can participate in multiple game modes such as Dragon Tiger, Poker,
+          Blackjack, Baccarat, Rummy, Teen Patti, and Andar Bahar.
         </p>
 
         <p>
-          The game features realtime multiplayer gameplay, responsive betting systems,
-          smooth card animations, and optimized mobile performance.
+          The game focuses on fast gameplay experience, realtime interaction,
+          and multiplayer online systems optimized for mobile platforms.
         </p>
 
         <p>
-          Players place bets on Dragon, Tiger, or Tie before cards are revealed.
-          The side with the higher card wins the round.
+          Players can join online rooms, tournaments, mission systems,
+          battle systems, and compete with other players through realtime
+          synchronization systems.
         </p>
 
       </div>
-    </div>
+
+    </section>
 
     <!-- FEATURES -->
-    <div class="section">
+
+    <section class="section">
 
       <div class="section-title">
-        🚀 Features
+        🚀 Key Features
       </div>
 
-      <div class="card">
+      <div class="feature-grid">
 
-        <ul>
-          <li>Realtime multiplayer gameplay</li>
-          <li>Touch input betting system</li>
-          <li>Drag and drop betting chips</li>
-          <li>Card dealing animations</li>
-          <li>Lobby and room systems</li>
-          <li>Mobile optimization</li>
-          <li>Reconnect handling</li>
-          <li>Player profile system</li>
-          <li>UI animation with DOTween</li>
-          <li>Sound and visual effects</li>
-          <li>Realtime synchronization</li>
-        </ul>
+        <div class="feature-item">
+          🎮 Multiplayer realtime gameplay
+        </div>
+
+        <div class="feature-item">
+          🃏 Multiple game modes
+        </div>
+
+        <div class="feature-item">
+          💰 Betting systems
+        </div>
+
+        <div class="feature-item">
+          🂡 Card dealing systems
+        </div>
+
+        <div class="feature-item">
+          👆 Drag-and-drop interactions
+        </div>
+
+        <div class="feature-item">
+          ⚔️ Normal, mission & battle systems
+        </div>
+
+        <div class="feature-item">
+          📱 Responsive mobile UI
+        </div>
+
+        <div class="feature-item">
+          ✨ Gameplay animations & visual effects
+        </div>
+
+        <div class="feature-item">
+          🌐 Realtime synchronization
+        </div>
+
+        <div class="feature-item">
+          🚀 Cross-platform mobile optimization
+        </div>
 
       </div>
-      
-      <div class="card">
 
-        <ul>
-          <li>Other game : </li>
-          <li>Developed gameplay systems and betting mechanics</li>
-          <li>Built card dealing and chip animations</li>
-          <li>Implemented touch input systems</li>
-          <li>Developed casino UI systems</li>
-          <li>Optimized mobile performance</li>
-          <li>Integrated realtime multiplayer networking</li>
-          <li>Fixed gameplay synchronization bugs</li>
-          <li>Worked with backend APIs and realtime events</li>
-        </ul>
-
-      </div>
-    </div>
+    </section>
 
     <!-- RESPONSIBILITIES -->
-    <div class="section">
+
+    <section class="section">
 
       <div class="section-title">
         💼 Responsibilities
@@ -240,35 +360,34 @@
       <div class="card">
 
         <ul>
-          <li>Developed gameplay systems and betting mechanics</li>
-          <li>Built card dealing and chip animations</li>
-          <li>Implemented touch input systems</li>
-          <li>Developed casino UI systems</li>
-          <li>Optimized mobile performance</li>
-          <li>Integrated realtime multiplayer networking</li>
-          <li>Fixed gameplay synchronization bugs</li>
-          <li>Worked with backend APIs and realtime events</li>
+
+          <li>Developed gameplay systems for casino game modes</li>
+
+          <li>Built betting systems and card dealing mechanics</li>
+
+          <li>Implemented drag-and-drop interactions</li>
+
+          <li>Developed responsive mobile UI systems</li>
+
+          <li>Integrated realtime multiplayer synchronization</li>
+
+          <li>Optimized mobile performance for Android and iOS</li>
+
+          <li>Created gameplay animations and visual effects</li>
+
+          <li>Worked with multiplayer networking and backend APIs</li>
+
+          <li>Fixed gameplay synchronization and UI bugs</li>
+
         </ul>
 
       </div>
-    </div>
 
-    <!-- PLATFORM -->
-    <div class="section">
-
-      <div class="section-title">
-        📱 Platform
-      </div>
-
-      <div class="card">
-
-        <p>Android / iOS</p>
-
-      </div>
-    </div>
+    </section>
 
     <!-- TECH STACK -->
-    <div class="section">
+
+    <section class="section">
 
       <div class="section-title">
         🧠 Tech Stack
@@ -279,44 +398,57 @@
         <div class="tech-container">
 
           <div class="tag">Unity 2022</div>
+
           <div class="tag">C#</div>
+
           <div class="tag">DOTween</div>
+
           <div class="tag">SmartFox</div>
+
           <div class="tag">Firebase</div>
+
           <div class="tag">Git</div>
+
           <div class="tag">SVN</div>
-          <div class="tag">Design Pattern</div>
+
+          <div class="tag">Object Pooling</div>
+
+          <div class="tag">Mobile Optimization</div>
 
         </div>
 
       </div>
-    </div>
+
+    </section>
 
     <!-- GAMEPLAY -->
-    <div class="section">
+
+    <section class="section" id="gameplay">
 
       <div class="section-title">
-        🎥 Gameplay
+        🎥 Gameplay Video
       </div>
 
       <div class="card">
 
         <p>
-          Add your gameplay video here.
+          Replace VIDEO_ID with your YouTube gameplay video.
         </p>
 
-        <!-- Replace VIDEO_ID -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
           title="Dragon Tiger Gameplay"
           frameborder="0"
           allowfullscreen>
         </iframe>
 
       </div>
-    </div>
+
+    </section>
 
     <!-- SCREENSHOTS -->
-    <div class="section">
+
+    <section class="section" id="screenshots">
 
       <div class="section-title">
         📷 Screenshots
@@ -324,22 +456,27 @@
 
       <div class="card">
 
-        <!-- Replace image path -->
-        <img
-          src="assets/dragon_tiger_1.png"
-          alt="Dragon Tiger Screenshot"
-          class="image">
+        <div class="gallery">
 
-        <img
-          src="assets/dragon_tiger_2.png"
-          alt="Dragon Tiger Screenshot"
-          class="image">
+          <!-- Replace images -->
+
+          <img src="assets/screenshot_1.png" alt="Dragon Tiger Screenshot">
+
+          <img src="assets/screenshot_2.png" alt="Dragon Tiger Screenshot">
+
+          <img src="assets/screenshot_3.png" alt="Dragon Tiger Screenshot">
+
+          <img src="assets/screenshot_4.png" alt="Dragon Tiger Screenshot">
+
+        </div>
 
       </div>
-    </div>
+
+    </section>
 
     <!-- CONTACT -->
-    <div class="section">
+
+    <section class="section">
 
       <div class="section-title">
         📬 Contact
@@ -347,28 +484,42 @@
 
       <div class="card">
 
-        <p>Email: trancongtan0905@gmail.com</p>
+        <p>Email: yourmail@gmail.com</p>
 
-        <a
-          href="https://github.com/yourusername"
-          target="_blank"
-          class="button">
-          GitHub
-        </a>
+        <p>GitHub: github.com/yourusername</p>
 
-        <a
-          href="cv.pdf"
-          target="_blank"
-          class="button">
-          Download CV
-        </a>
+        <div style="margin-top:20px;">
+
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            class="button button-primary">
+
+            GitHub
+
+          </a>
+
+          <a
+            href="cv.pdf"
+            target="_blank"
+            class="button button-secondary">
+
+            Download CV
+
+          </a>
+
+        </div>
 
       </div>
-    </div>
+
+    </section>
 
     <!-- FOOTER -->
+
     <div class="footer">
+
       © 2026 Unity Developer Portfolio
+
     </div>
 
   </div>
@@ -376,3 +527,4 @@
 </body>
 
 </html>
+```
