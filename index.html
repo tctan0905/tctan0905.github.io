@@ -244,7 +244,53 @@
   }
 
 }
-
+    /* IMAGE POPUP */
+    
+    .image-popup{
+      display:none;
+      position:fixed;
+      z-index:9999;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.9);
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+    
+    .popup-content{
+      max-width:90%;
+      max-height:90%;
+      border-radius:16px;
+      animation:zoomIn 0.3s ease;
+    }
+    
+    .close-popup{
+      position:absolute;
+      top:30px;
+      right:40px;
+      color:white;
+      font-size:50px;
+      cursor:pointer;
+    }
+    
+    .gallery img{
+      cursor:pointer;
+    }
+    
+    @keyframes zoomIn{
+      from{
+        transform:scale(0.8);
+        opacity:0;
+      }
+    
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
   </style>
 
 </head>
@@ -587,7 +633,51 @@
     </div>
 
   </div>
+  
+<!-- IMAGE POPUP -->
 
+<div id="imagePopup" class="image-popup">
+
+  <span class="close-popup">&times;</span>
+
+  <img class="popup-content" id="popupImage">
+
+</div>
+  <script>
+
+  const popup = document.getElementById("imagePopup");
+  const popupImage = document.getElementById("popupImage");
+  const galleryImages = document.querySelectorAll(".gallery img");
+  const closePopup = document.querySelector(".close-popup");
+
+  galleryImages.forEach((img) => {
+
+    img.addEventListener("click", () => {
+
+      popup.style.display = "flex";
+      popupImage.src = img.src;
+
+    });
+
+  });
+
+  closePopup.addEventListener("click", () => {
+
+    popup.style.display = "none";
+
+  });
+
+  popup.addEventListener("click", (e) => {
+
+    if(e.target === popup){
+
+      popup.style.display = "none";
+
+    }
+
+  });
+
+</script>
 </body>
 
 </html>
